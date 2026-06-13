@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Mohamed Hady Diallo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">
+                    <i data-lucide="code" class="logo-icon"></i>
+                    <span class="logo-text">scriptseinsei</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" data-lucide="moon"></button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Me contacter</h1>
+            <p>Parlons de vos projets et de comment je peux vous aider</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Information de contact</h2>
+                    <p>N'hésitez pas à me contacter par l'un de ces canaux :</p>
+                    
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i data-lucide="mail" class="contact-icon"></i>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <a href="mailto:contact@hadydieye.com">contact@hadydieye.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i data-lucide="message-circle" class="contact-icon"></i>
+                            <div class="contact-details">
+                                <h4>WhatsApp</h4>
+                                <a href="https://wa.me/224" target="_blank">+224 XXX XXX XXX</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i data-lucide="briefcase" class="contact-icon"></i>
+                            <div class="contact-details">
+                                <h4>LinkedIn</h4>
+                                <a href="https://linkedin.com/in/hadydieye" target="_blank">linkedin.com/in/hadydieye</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i data-lucide="github" class="contact-icon"></i>
+                            <div class="contact-details">
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/hadydieye" target="_blank">github.com/hadydieye</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i data-lucide="users" class="contact-icon"></i>
+                            <div class="contact-details">
+                                <h4>Facebook</h4>
+                                <a href="https://facebook.com/hadydieye" target="_blank">facebook.com/hadydieye</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i data-lucide="map-pin" class="contact-icon"></i>
+                            <div class="contact-details">
+                                <h4>Localisation</h4>
+                                <p>Conakry, Guinée</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Envoyez-moi un message</h2>
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                placeholder="Votre nom"
+                                required
+                            >
+                            <span class="form-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="votre.email@exemple.com"
+                                required
+                            >
+                            <span class="form-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                placeholder="+224 XXX XXX XXX"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Sujet *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">-- Sélectionnez un sujet --</option>
+                                <option value="project">Nouveau projet</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="freelance">Freelance</option>
+                                <option value="question">Question</option>
+                                <option value="other">Autre</option>
+                            </select>
+                            <span class="form-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                placeholder="Votre message ici..."
+                                rows="6"
+                                required
+                            ></textarea>
+                            <span class="form-error"></span>
+                        </div>
+
+                        <div class="form-group checkbox">
+                            <input 
+                                type="checkbox" 
+                                id="consent" 
+                                name="consent" 
+                                required
+                            >
+                            <label for="consent">
+                                Je consens au traitement de mes données personnelles *
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary form-submit">
+                            Envoyer le message
+                        </button>
+
+                        <div id="formMessage" class="form-message" style="display: none;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Réponse rapide garantie</h2>
+            <p>Je réponds généralement dans les 24 heures à tous les messages.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>scriptseinsei</h3>
+                    <p>Construire des solutions pour l'Afrique</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="projets.html">Projets</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suivez-moi</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/hadydieye" target="_blank">GitHub</a>
+                        <a href="#" target="_blank">LinkedIn</a>
+                        <a href="#" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mohamed Hady Diallo. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
